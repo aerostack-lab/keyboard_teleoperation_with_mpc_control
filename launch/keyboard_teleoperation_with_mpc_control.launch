@@ -1,0 +1,8 @@
+<launch>
+	<arg name="drone_id_namespace"  default="drone1" />
+	<group ns="$(arg drone_id_namespace)">
+		<node name="keyboard_teleoperation_with_mpc_control" pkg="keyboard_teleoperation_with_mpc_control" type="keyboard_teleoperation_with_mpc_control" output="screen">
+			<param name="drone_id_namespace" value="$(arg drone_id_namespace)" type="string"/>
+		</node>
+	</group>
+</launch>
